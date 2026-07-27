@@ -1,0 +1,300 @@
+/* === RESET OG BASIS === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  line-height: 1.7;
+  color: #333;
+  background-color: #fafafa;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* === HEADER === */
+.site-header {
+  background-color: #6d4aff;
+  color: white;
+  padding: 1.5rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.site-header h1 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.site-header a {
+  color: white;
+  text-decoration: none;
+}
+
+.site-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.site-nav a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.site-nav a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.site-nav a.active {
+  background-color: rgba(255, 255, 255, 0.3);
+  font-weight: 600;
+}
+
+/* === SECTIONS === */
+section {
+  margin-bottom: 3rem;
+}
+
+h2 {
+  color: #6d4aff;
+  margin-bottom: 1rem;
+  font-size: 1.75rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #6d4aff;
+}
+
+h3 {
+  color: #444;
+  margin: 1.5rem 0 0.5rem 0;
+  font-size: 1.25rem;
+}
+
+.date {
+  color: #666;
+  font-style: italic;
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+}
+
+/* === CONTACT INFO BOX === */
+.contact-info {
+  background-color: #f0f0ff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  border-left: 4px solid #6d4aff;
+}
+
+.contact-info p {
+  margin: 0.5rem 0;
+}
+
+.contact-info a {
+  color: #6d4aff;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* === TABLER === */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  text-align: left;
+}
+
+th {
+  background-color: #6d4aff;
+  color: white;
+  font-weight: 600;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tr:hover {
+  background-color: #f0f0ff;
+}
+
+/* === LISTER === */
+ul {
+  margin-left: 1.5rem;
+  margin-top: 0.75rem;
+  padding-left: 0;
+}
+
+li {
+  margin: 0.5rem 0;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 2rem 0;
+}
+
+/* === FOOTER === */
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1.5rem 0;
+  margin-top: 3rem;
+}
+
+.footer a {
+  color: #bfaaff;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* === RESPONSIV === */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+  
+  .site-nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+  
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+/* === MØRK TILSTAND === */
+@media (prefers-color-scheme: dark) {
+  body {
+    color: #e0e0e0;
+    background-color: #1a1a1a;
+  }
+  
+  .site-header {
+    background-color: #5a4add;
+  }
+  
+  h2 {
+    color: #bfaaff;
+    border-bottom-color: #bfaaff;
+  }
+  
+  .contact-info {
+    background-color: #2a2a3a;
+    border-left-color: #bfaaff;
+  }
+  
+  .contact-info a {
+    color: #bfaaff;
+  }
+  
+  table {
+    background-color: #2a2a2a;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  }
+  
+  th {
+    background-color: #5a4add;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #333333;
+  }
+  
+  tr:hover {
+    background-color: #3a3a4a;
+  }
+  
+  section {
+    border-bottom-color: #444;
+  }
+  
+  hr {
+    border-top-color: #444;
+  }
+}
+
+/* === ACCESSIBILITY === */
+a:focus,
+button:focus {
+  outline: 2px solid #6d4aff;
+  outline-offset: 2px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* === PRINT STYLING === */
+@media print {
+  .site-header, .site-nav, .footer {
+    display: none;
+  }
+  
+  body {
+    background-color: white;
+    color: black;
+  }
+  
+  .container {
+    max-width: 100%;
+    padding: 0;
+  }
+  
+  .contact-info {
+    background-color: white;
+    border: 1px solid #ccc;
+  }
+  
+  table {
+    box-shadow: none;
+    page-break-inside: auto;
+  }
+  
+  tr {
+    page-break-inside: avoid;
+    page-break-after: auto;
+  }
+}
