@@ -6,6 +6,7 @@
   <meta name="description" content="Simon Baunsgaard Ertner - IT-sikkerhedsprofil med baggrund i softwareudvikling">
   <title>Simon Baunsgaard Ertner | Profil</title>
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/print.js"></script>
 </head>
 <body>
   <header class="site-header">
@@ -21,8 +22,10 @@
       </nav>
     </div>
   </header>
+
   
-  <main class="container">
+  
+  <main class="container profile-section">
     <section class="profile-section">
       <div class="profile-header">
         <div class="profile-image-container">
@@ -33,7 +36,7 @@
         </div>
         
         <div class="contact-info">
-          <p><strong>📍 Adresse:</strong> Bredagerløkken 170, 5220 Odense SØ</p>
+          <p><strong>📍 Adresse:</strong> Bredagerløkken, 5220 Odense SØ</p>
           <p><strong>📞 Telefon:</strong> (<a href="tel:+4522474951">+45</a>) 22 47 49 51</p>
           <p><strong>📧 Email:</strong> <a href="mailto:simon@baunsgaard-ertner.dk">simon@baunsgaard-ertner.dk</a></p>
           <p><strong>🔗 GitHub:</strong> <a href="https://github.com/Sbauns" target="_blank" rel="noopener">Sbauns</a> | <strong>GitLab:</strong> <a href="https://gitlab.com/SimonBauns" target="_blank" rel="noopener">SimonBauns</a></p>
@@ -50,6 +53,49 @@
         <li><strong>Sprog:</strong> Dansk (modersmål), Engelsk (professionelt), Tysk (grundlæggende)</li>
       </ul>
     </section>
+
+    <div class="print-controls">
+      <h3>Print CV - Vælg hvilke afsnit du vil inkludere</h3>
+      <form id="print-options">
+        <fieldset>
+          <legend>Afsnit til at inkludere:</legend>
+          
+          <label>
+            <input type="checkbox" id="include-profile" checked disabled>
+            <span>Profil (altid med)</span>
+          </label>
+          
+          <label>
+            <input type="checkbox" id="include-competencies" checked>
+            <span>Kompetencer</span>
+          </label>
+          
+          <label>
+            <input type="checkbox" id="include-experience" checked>
+            <span>Erhvervserfaring</span>
+          </label>
+          
+          <label>
+            <input type="checkbox" id="include-education" checked>
+            <span>Uddannelse</span>
+          </label>
+          
+          <label>
+            <input type="checkbox" id="include-contact" checked>
+            <span>Kontaktinformation</span>
+          </label>
+        </fieldset>
+        
+        <button type="button" id="print-cv-btn" class="btn btn-primary">
+          🖨️ Print CV som PDF
+        </button>
+        
+        <button type="button" id="reset-checkboxes-btn" class="btn btn-secondary">
+          🔄 Nulstil alle valg
+        </button>
+      </form>
+    </div>
+
   </main>
   
   <footer class="footer">

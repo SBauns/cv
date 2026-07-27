@@ -359,3 +359,175 @@ button:focus {
     page-break-after: auto;
   }
 }
+
+/* === PRINT CONTROLS (SKJULT PÅ SKÆRM) === */
+.print-controls {
+  display: block;
+  background-color: #f0f0ff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid #6d4aff;
+  margin-bottom: 3rem;
+}
+
+.print-controls h3 {
+  color: #444;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+.print-controls fieldset {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+}
+
+.print-controls legend {
+  font-weight: 600;
+  padding: 0 0.5rem;
+  color: #6d4aff;
+}
+
+.print-controls label {
+  display: flex;
+  align-items: center;
+  margin: 0.5rem 0;
+  cursor: pointer;
+}
+
+.print-controls input[type="checkbox"] {
+  margin-right: 0.75rem;
+  width: 18px;
+  height: 18px;
+  accent-color: #6d4aff;
+}
+
+.print-controls input[type="checkbox"]:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+/* === BUTTON STYLES === */
+.btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin-right: 0.5rem;
+}
+
+.btn-primary {
+  background-color: #6d4aff;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #5a4add;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn-secondary {
+  background-color: #ddd;
+  color: #333;
+}
+
+.btn-secondary:hover {
+  background-color: #ccc;
+}
+
+/* === PRINT MEDIA QUERY === */
+@media print {
+  /* Skjul alt der ikke skal prints */
+  body * {
+    visibility: hidden;
+  }
+  
+  .site-header,
+  .site-nav,
+  .footer,
+  .print-controls,
+  .no-print {
+    display: none !important;
+  }
+  
+  /* Vis kun de valgte sektioner */
+  .profile-section,
+  .contact-info {
+    visibility: visible;
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
+  
+  /* Dynamisk vis/skjul baseret på checkboxes */
+  body:not(.print-competencies) .section-competencies,
+  body:not(.print-experience) .section-experience,
+  body:not(.print-education) .section-education {
+    display: none !important;
+  }
+  
+  /* Container justering til papir */
+  .container {
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  
+  section {
+    page-break-inside: avoid;
+    margin-bottom: 1.5rem;
+  }
+  
+  h2 {
+    color: #000;
+    border-bottom: 2px solid #000;
+  }
+  
+  table {
+    box-shadow: none;
+    page-break-inside: avoid;
+    width: 100%;
+  }
+  
+  th {
+    background-color: #f0f0f0 !important;
+    color: #000 !important;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #fafafa !important;
+  }
+  
+  .contact-info {
+    background-color: #f0f0f0;
+    border: 1px solid #000;
+  }
+  
+  .profile-image {
+    float: left;
+    margin-right: 1rem;
+    width: 120px !important;
+    height: 120px !important;
+    max-width: 120px !important;
+    max-height: 120px !important;
+  }
+  
+  .profile-header {
+    min-height: 150px;
+  }
+  
+  footer {
+    display: none;
+  }
+  
+  /* Header til printdokumentet */
+  @page {
+    size: A4;
+    margin: 2cm;
+  }
+}
