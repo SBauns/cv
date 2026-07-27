@@ -89,12 +89,43 @@ h3 {
   font-size: 0.95rem;
 }
 
+/* === PROFILBILLEDE === */
+.profile-section {
+  margin-bottom: 3rem;
+}
+
+.profile-header {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+.profile-image-container {
+  flex-shrink: 0;
+  width: fit-content;
+  max-width: 100%;
+}
+
+.profile-image {
+  width: min(250px, 35vw);
+  height: min(250px, 35vw);
+  max-height: 40vh;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  border: 4px solid #6d4aff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  background-color: #f0f0ff;
+  display: block;
+}
+
 /* === CONTACT INFO BOX === */
 .contact-info {
+  flex-grow: 1;
   background-color: #f0f0ff;
   padding: 1.5rem;
   border-radius: 8px;
-  margin-bottom: 2rem;
   border-left: 4px solid #6d4aff;
 }
 
@@ -111,7 +142,7 @@ h3 {
   text-decoration: underline;
 }
 
-/* === TABLER === */
+/* === TABELLER === */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -180,20 +211,45 @@ hr {
   .container {
     padding: 1rem;
   }
-  
+
   .site-nav ul {
     flex-direction: column;
     gap: 0.5rem;
   }
-  
+
   h2 {
     font-size: 1.5rem;
   }
-  
+
   table {
     display: block;
     overflow-x: auto;
     white-space: nowrap;
+  }
+
+  .profile-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .contact-info {
+    width: 100%;
+  }
+
+  .profile-image {
+    width: 180px;
+    height: 180px;
+    max-height: 35vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-image {
+    width: 150px;
+    height: 150px;
+    max-height: 30vh;
   }
 }
 
@@ -203,46 +259,51 @@ hr {
     color: #e0e0e0;
     background-color: #1a1a1a;
   }
-  
+
   .site-header {
     background-color: #5a4add;
   }
-  
+
   h2 {
     color: #bfaaff;
     border-bottom-color: #bfaaff;
   }
-  
+
+  .profile-image {
+    border-color: #bfaaff;
+    background-color: #2a2a3a;
+  }
+
   .contact-info {
     background-color: #2a2a3a;
     border-left-color: #bfaaff;
   }
-  
+
   .contact-info a {
     color: #bfaaff;
   }
-  
+
   table {
     background-color: #2a2a2a;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   }
-  
+
   th {
     background-color: #5a4add;
   }
-  
+
   tr:nth-child(even) {
     background-color: #333333;
   }
-  
+
   tr:hover {
     background-color: #3a3a4a;
   }
-  
+
   section {
     border-bottom-color: #444;
   }
-  
+
   hr {
     border-top-color: #444;
   }
@@ -272,107 +333,29 @@ button:focus {
   .site-header, .site-nav, .footer {
     display: none;
   }
-  
+
   body {
     background-color: white;
     color: black;
   }
-  
+
   .container {
     max-width: 100%;
     padding: 0;
   }
-  
+
   .contact-info {
     background-color: white;
     border: 1px solid #ccc;
   }
-  
+
   table {
     box-shadow: none;
     page-break-inside: auto;
   }
-  
+
   tr {
     page-break-inside: avoid;
     page-break-after: auto;
   }
-
-/* === PROFILBILLEDE === */
-.profile-section {
-  margin-bottom: 3rem;
-}
-
-.profile-header {
-  display: flex;
-  gap: 2rem;
-  align-items: flex-start;
-  margin-bottom: 2rem;
-}
-
-.profile-image-container {
-  flex-shrink: 0;
-  width: fit-content;
-  max-width: 100%;
-}
-
-.profile-image {
-  width: 250px;
-  height: 250px;
-  max-width: 100%;
-  max-height: 40vh;
-  border-radius: 50%;
-  object-fit: cover;
-  object-position: center top;
-  border: 4px solid #6d4aff;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  background-color: #f0f0ff;
-  display: block;
-}
-
-/* Sæt maksimum bredde for mobile enheder */
-@media (max-width: 768px) {
-  .profile-header {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 1rem;
-  }
-  
-  .contact-info {
-    width: 100%;
-  }
-  
-  .profile-image {
-    width: 180px;
-    height: 180px;
-    max-height: 35vh;
-  }
-}
-
-/* Extra small devices */
-@media (max-width: 480px) {
-  .profile-image {
-    width: 150px;
-    height: 150px;
-    max-height: 30vh;
-  }
-}
-
-/* === MØRK TILSTAND FOR PROFILBILLEDE === */
-@media (prefers-color-scheme: dark) {
-  .profile-image {
-    border-color: #bfaaff;
-    background-color: #2a2a3a;
-  }
-  
-  .contact-info {
-    background-color: #2a2a3a;
-    border-left-color: #bfaaff;
-  }
-  
-  .contact-info a {
-    color: #bfaaff;
-  }
-}
 }
