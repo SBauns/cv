@@ -1,0 +1,203 @@
+/* Reset og basis */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fafafa;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Header */
+.site-header {
+  background-color: #6d4aff;
+  color: white;
+  padding: 1.5rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.site-header h1 {
+  margin-bottom: 0.5rem;
+}
+
+.site-header a {
+  color: white;
+  text-decoration: none;
+}
+
+.site-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.site-nav a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.site-nav a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Indholdssektioner */
+section {
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #ddd;
+}
+
+section:last-child {
+  border-bottom: none;
+}
+
+h2 {
+  color: #6d4aff;
+  margin-bottom: 1rem;
+  font-size: 1.75rem;
+}
+
+h3 {
+  color: #444;
+  margin: 1.5rem 0 0.5rem 0;
+  font-size: 1.25rem;
+}
+
+h4 {
+  color: #555;
+  margin: 1rem 0 0.5rem 0;
+  font-size: 1rem;
+}
+
+/* Kontaktinfo */
+.contact-info {
+  background-color: #f0f0ff;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.contact-info p {
+  margin: 0.25rem 0;
+}
+
+.contact-info a {
+  color: #6d4aff;
+  text-decoration: none;
+}
+
+/* Tabeller */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  background-color: white;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 0.75rem;
+  text-align: left;
+}
+
+th {
+  background-color: #6d4aff;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Listes */
+ul {
+  margin-left: 2rem;
+  margin-top: 0.5rem;
+}
+
+li {
+  margin: 0.5rem 0;
+}
+
+/* Footer */
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1.5rem 0;
+  margin-top: 3rem;
+}
+
+.footer a {
+  color: #bfaaff;
+  text-decoration: none;
+}
+
+/* Responsiv */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+  
+  .site-nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+  
+  table {
+    display: block;
+    overflow-x: auto;
+  }
+}
+
+/* Mørk tilstand */
+@media (prefers-color-scheme: dark) {
+  body {
+    color: #e0e0e0;
+    background-color: #1a1a1a;
+  }
+  
+  .site-header {
+    background-color: #5a4add;
+  }
+  
+  th {
+    background-color: #5a4add;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #2a2a2a;
+  }
+  
+  section {
+    border-bottom-color: #444;
+  }
+  
+  h2 {
+    color: #bfaaff;
+  }
+  
+  .contact-info {
+    background-color: #2a2a3a;
+  }
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title | default: site.title }}</title>
+  <meta name="description" content="{{ page.description | default: site.description }}">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  {% seo %}
+</head>
+<body>
+  {% include header.html %}
+  
+  <main class="container">
+    {{ content }}
+  </main>
+  
+  <footer class="footer">
+    <p>&copy; 2026 Simon Baunsgaard Ertner | 
+    <a href="mailto:simon@baunsgaard-ertner.dk">simon@baunsgaard-ertner.dk</a></p>
+  </footer>
+</body>
+</html>
