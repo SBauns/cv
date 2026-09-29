@@ -20,7 +20,9 @@ page_class: profile-section
 
 ## Profil
 
-IT-sikkerhedsprofil med baggrund i softwareudvikling og erfaring med governance, compliance og risikostyring. Jeg arbejder med at omsætte komplekse sikkerhedskrav til konkrete løsninger og fungerer som bindeled mellem teknik og forretning. Har fokus på at identificere risici tidligt og sikre, at sikkerhed bliver en naturlig del af arbejdet.
+IT-sikkerhedsprofil med udviklerbaggrund og erfaring med governance, compliance og risikostyring. Jeg arbejder fra begge sider af bordet: Jeg forstår koden og infrastrukturen godt nok til at skrive og teste selv, og jeg kender rammerne (ISO 27000-familien, D-mærket, CIS Controls, OWASP ASVS) godt nok til at omsætte dem til krav, en udvikler faktisk kan bygge efter.
+
+Min tilgang er nysgerrig og udfordrende. Jeg fungerer bedst som bindeled mellem teknik og forretning, hvor min rolle er at stille de spørgsmål, der afslører risici tidligt, snarere end at levere svar på én gang. Sikkerhed skal ikke være en checkliste, der hænger over projektet, men en naturlig del af den måde, vi bygger på.
 
 ### Yderligere information
 

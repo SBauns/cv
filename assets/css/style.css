@@ -269,6 +269,14 @@ hr {
     border-bottom-color: #bfaaff;
   }
 
+  h3 {
+    color: #cfcfcf;
+  }
+
+  .date {
+    color: #a0a0a0;
+  }
+
   .profile-image {
     border-color: #bfaaff;
     background-color: #2a2a3a;
@@ -292,16 +300,16 @@ hr {
     background-color: #5a4add;
   }
 
+  td, th {
+    border-color: #444;
+  }
+
   tr:nth-child(even) {
     background-color: #333333;
   }
 
   tr:hover {
     background-color: #3a3a4a;
-  }
-
-  section {
-    border-bottom-color: #444;
   }
 
   hr {
@@ -328,36 +336,17 @@ button:focus {
   border: 0;
 }
 
-/* === PRINT STYLING === */
-@media print {
-  .site-header, .site-nav, .footer {
-    display: none;
-  }
-
-  body {
-    background-color: white;
-    color: black;
-  }
-
-  .container {
-    max-width: 100%;
-    padding: 0;
-  }
-
-  .contact-info {
-    background-color: white;
-    border: 1px solid #ccc;
-  }
-
-  table {
-    box-shadow: none;
-    page-break-inside: auto;
-  }
-
-  tr {
-    page-break-inside: avoid;
-    page-break-after: auto;
-  }
+.visually-hidden:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 1rem;
+  padding: 0.5rem 1rem;
+  clip: auto;
+  background-color: white;
+  color: #6d4aff;
+  border-radius: 4px;
+  text-decoration: underline;
 }
 
 /* === PRINT CONTROLS (SKJULT PÅ SKÆRM) === */
@@ -440,13 +429,14 @@ button:focus {
   background-color: #ccc;
 }
 
-/* === PRINT MEDIA QUERY === */
+/* === PRINT === */
+@page {
+  size: A4;
+  margin: 2cm;
+}
+
 @media print {
-  /* Skjul alt der ikke skal prints */
-  body * {
-    visibility: hidden;
-  }
-  
+  /* Skjul navigation, footer og print-kontroller */
   .site-header,
   .site-nav,
   .footer,
@@ -454,60 +444,43 @@ button:focus {
   .no-print {
     display: none !important;
   }
-  
-  /* Vis kun de valgte sektioner */
-  .profile-section,
-  .contact-info {
-    visibility: visible;
-    position: absolute;
-    left: 0;
-    right: 0;
+
+  body {
+    background-color: white;
+    color: black;
   }
-  
-  /* Dynamisk vis/skjul baseret på checkboxes */
-  body:not(.print-competencies) .section-competencies,
-  body:not(.print-experience) .section-experience,
-  body:not(.print-education) .section-education {
-    display: none !important;
-  }
-  
-  /* Container justering til papir */
+
   .container {
     max-width: 100%;
     padding: 0;
     margin: 0;
   }
-  
-  section {
-    page-break-inside: avoid;
-    margin-bottom: 1.5rem;
-  }
-  
+
   h2 {
     color: #000;
     border-bottom: 2px solid #000;
   }
-  
+
   table {
     box-shadow: none;
     page-break-inside: avoid;
     width: 100%;
   }
-  
+
   th {
     background-color: #f0f0f0 !important;
     color: #000 !important;
   }
-  
+
   tr:nth-child(even) {
     background-color: #fafafa !important;
   }
-  
+
   .contact-info {
     background-color: #f0f0f0;
     border: 1px solid #000;
   }
-  
+
   .profile-image {
     float: left;
     margin-right: 1rem;
@@ -516,25 +489,24 @@ button:focus {
     max-width: 120px !important;
     max-height: 120px !important;
   }
-  
+
   .profile-header {
     min-height: 150px;
   }
-  
-  footer {
-    display: none;
-  }
-  
-  /* Header til printdokumentet */
-  @page {
-    size: A4;
-    margin: 2cm;
-  }
-}
 
-.date-location {
-  /* flyt dine nuværende .date-regler hertil */
-  font-size: 0.9rem;
-  color: #666;
-  margin-top: -0.5rem;
+  section {
+    page-break-inside: avoid;
+    margin-bottom: 1.5rem;
+  }
+
+  tr {
+    page-break-inside: avoid;
+  }
+
+  /* Dynamisk vis/skjul baseret på checkboxes */
+  body:not(.print-competencies) .section-competencies,
+  body:not(.print-experience) .section-experience,
+  body:not(.print-education) .section-education {
+    display: none !important;
+  }
 }

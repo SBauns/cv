@@ -7,32 +7,32 @@ permalink: /experience/
 ---
 
 ## Mette Munk / Pakkeri
-{: .date-location}
 
 August 2026 - September 2026, Odense
+{: .date}
 
 - Pakning af kager
 
 ## Styrk Vin / Landbrugsmedhjælper
-{: .date-location}
 
 Juli 2026 - Juli 2026, Odense
+{: .date}
 
 - Hjalp til på vingård med diverse praktiske opgaver
 
 ## Steffen Sten / Projektarbejde
-{: .date-location}
 
 Oktober 2025 - November 2025, Odense
+{: .date}
 
 - Integration af produktdata og marketing
 - Praktisk datagrundlag (herunder billeder)
 - Samarbejde og sparring
 
 ## Meras / Webudvikler
-{: .date-location}
 
 Januar 2023 - December 2023, Odense
+{: .date}
 
 - Ansvar for udvikling af salgsplatform
 - Øvrige webopgaver
@@ -40,23 +40,23 @@ Januar 2023 - December 2023, Odense
 - Stillingen ophørte ved konkurs
 
 ## UCL / XRLab Studentermedhjælper
-{: .date-location}
 
 Januar 2021 - April 2022, Odense
+{: .date}
 
 - Udstyrshåndtering og registrering
 - Support ved arrangementer
 
 ## SYKES / Kundeservice
-{: .date-location}
 
 Maj 2020 - September 2020, Odense
+{: .date}
 
 - Kundesupport via telefon og mail
 - Procesunderstøttelse
 - Tilbudt seniorrolle hurtigt
 
 ## Simon Hansen - Wolt Courier / Selvstændig kurér
-{: .date-location}
 
 Februar 2018 - Maj 2020, Odense
+{: .date}
