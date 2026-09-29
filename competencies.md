@@ -3,6 +3,7 @@ layout: default
 title: Simon Baunsgaard Ertner | Kompetencer
 description: Simon Baunsgaard Ertner - Mine kerne- og sekundære kompetencer
 page_class: section-competencies
+permalink: /competencies/
 ---
 
 ## Kernekompetencer

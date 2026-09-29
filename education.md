@@ -3,6 +3,7 @@ layout: default
 title: Simon Baunsgaard Ertner | Uddannelse
 description: Simon Baunsgaard Ertner - Mine uddannelser og kurser
 page_class: section-education
+permalink: /education/
 ---
 
 ## UCL / IT-Sikkerhed - Professionsbachelor
